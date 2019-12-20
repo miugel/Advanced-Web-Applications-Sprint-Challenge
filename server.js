@@ -91,7 +91,7 @@ let colors = [
 let nextId = 12;
 
 function authenticator(req, res, next) {
-	const { authorization } = req.headers;
+	const {authorization} = req.headers;
 	if (authorization === token) {
 		next();
 	} else {
@@ -100,7 +100,7 @@ function authenticator(req, res, next) {
 }
 
 app.post("/api/login", (req, res) => {
-	const { username, password } = req.body;
+	const {username, password} = req.body;
 	if (username === "Lambda School" && password === "i<3Lambd4") {
 		req.loggedIn = true;
 		setTimeout(() => {
@@ -111,7 +111,7 @@ app.post("/api/login", (req, res) => {
 	} else {
 		res
 		.status(403)
-		.json({ error: "Username or Password incorrect. Please see Readme" });
+		.json({error: "Username or Password incorrect. Please see Readme"});
 	}
 });
 
