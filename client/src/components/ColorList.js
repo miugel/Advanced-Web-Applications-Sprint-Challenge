@@ -44,7 +44,7 @@ const ColorList = ({colors, updateColors}) => {
 			<p>colors</p>
 			
 			<ul>
-				{colors !== undefined && colors.map(color => (
+				{colors.map(color => (
 				<li key={color.color} onClick={() => editColor(color)}>
 					<span>
 						<span className="delete" onClick={e => {
